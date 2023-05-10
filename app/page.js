@@ -1,11 +1,12 @@
 import { Footer, Navbar } from '../components';
-import { About, Hero } from '../sections';
+import { About, Categories, Hero } from '../sections';
 
 const Page = () => (
   <div>
     <Navbar />
     <Hero />
     <About />
+    <Categories />
     <Footer />
   </div>
 );

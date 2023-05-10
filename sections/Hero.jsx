@@ -1,5 +1,7 @@
 'use client';
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { heroSectionVariants, buttonVariants } from "../utils/motion";
 
 const Hero = () => (
   <section>
@@ -17,20 +19,29 @@ const Hero = () => (
         className=" object-cover w-[200vh] h-[92vh] object-center"
 
         />
-
-        <div className="absolute -mt-[450px] ml-32 text-7xl">
+<div className="relative">
+        <motion.div
+         className="absolute -mt-[450px] ml-32 text-7xl"
+         variants={heroSectionVariants}
+         initial="hidden"
+         animate="visible"
+         >
           <p className=" font-light">The Westmire</p>
           <p className=" font-extrabold">A56 Headset</p>
 
           <div className="mt-3">
-            <button className=" text-lg font-bold bg-black text-white rounded-full">
+            <button
+             className=" text-lg font-bold bg-black text-white rounded-full hover:scale-125 duration-500"
+             
+             >
               <p className="mx-10 my-3">Buy Now</p>
               </button>
 
-              <button className=" text-lg font-bold bg-gray-500 text-black rounded-full ml-7">
+              <button className=" text-lg font-bold bg-gray-500 text-black rounded-full ml-7 hover:scale-125 duration-500">
               <p className="mx-10 my-3">Shop All</p>
               </button>
           </div>
+        </motion.div>
         </div>
       </div>
 
