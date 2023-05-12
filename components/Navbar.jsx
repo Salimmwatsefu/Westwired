@@ -14,21 +14,17 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      variants={navVariants}
-      initial="hidden"
-      animate="visible"
+    <nav
+      
       className="bg-transparent px-10"
     >
-      <div className="py-3 flex">
-        <motion.div
-          className="ml-10 font-bold uppercase"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+      <div className="md:py-3 py-2 flex ">
+        <div
+          className="md:ml-10 font-bold uppercase w-32 "
+          
         >
           West Wired
-        </motion.div>
+        </div>
 
         {/* Render desktop navbar when screen size is medium and above */}
         <div className="w-4/5 flex items-center justify-center">
@@ -36,8 +32,8 @@ const Navbar = () => {
             <Link href={"/"}>
               <li>Home</li>
             </Link>
-            <Link href={""}>
-              <li>About</li>
+            <Link href={"/headphones"}>
+              <li>Headphones</li>
             </Link>
             <Link href={""}>
               <li>Contacts</li>
@@ -45,7 +41,7 @@ const Navbar = () => {
           </ul>
 
           {/* Render hamburger menu icon when screen size is small */}
-          <div className="md:hidden">
+          <div className="md:hidden ml-44">
             {isOpen ? (
               <HiX onClick={toggleMenu} className="text-2xl" />
             ) : (
@@ -56,22 +52,22 @@ const Navbar = () => {
 
         {/* Render mobile navbar when menu icon is clicked */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 right-0 w-full bg-white p-4">
-            <ul className="flex flex-col gap-4">
+          <div className="md:hidden absolute top-11 right-0 w-full bg-white p-4 z-[900px] ">
+            <ul className="flex flex-col gap-1  ">
               <Link href={"/"}>
-                <li>Home</li>
+                <li className="hover:bg-gray-500 py-1">Home</li>
+              </Link>
+              <Link href={"/headphones"}>
+                <li className="hover:bg-gray-500 py-1">Headphones</li>
               </Link>
               <Link href={""}>
-                <li>About</li>
-              </Link>
-              <Link href={""}>
-                <li>Contacts</li>
+                <li className="hover:bg-gray-500 py-1">Contacts</li>
               </Link>
             </ul>
           </div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

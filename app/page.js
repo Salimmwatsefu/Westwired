@@ -3,7 +3,6 @@ import { About, Categories, Hero } from '../sections';
 
 const Page = () => (
   <div>
-    <Navbar />
     <Hero />
     <About />
     <Categories />

@@ -15,18 +15,18 @@ const About = () =>{
   return(
   
   <section className=" bg-gray-100">
-    <div className="pt-14 flex ">
+    <div className="md:pt-14 pt-10  md:flex pb-9 ">
       <div
-       className=" mt-32 w-[400px] ml-28 "
+       className=" md:mt-32 w-[400px] md:ml-28 text-center"
        
        >
-        <h1 className="font-bold text-4xl">All-new Technology</h1>
-        <p className="mt-9 text-lg font-medium text-gray-600">News write-ups offer a great way to let clients know about new products and services, events, awards, and more. News write-ups offer a great way to let clients know about new products and services, events, awards, and more.</p>
+        <h1 className="font-bold md:text-4xl text-3xl w-96">All-new Technology</h1>
+        <p className="md:mt-9 mt-5 md:text-lg font-medium text-gray-600">News write-ups offer a great way to let clients know about new products and services, events, awards, and more. News write-ups offer a great way to let clients know about new products and services, events, awards, and more.</p>
       </div>
 
       
       <motion.div 
-      className="w-[700px] h-[600px] pl-[200px] "
+      className="md:w-[700px] md:h-[600px] md:pl-[200px] w-52 h-52 mx-auto md:mt-0 mt-7"
       initial={false}
         animate={isLoaded && isInView ? "visible" : "hidden"}
         variants={imageVariants}
@@ -42,7 +42,7 @@ const About = () =>{
         height={1900}
         quality={100}
         priority={true}
-        className=" object-cover w-[450px] h-[500px]  object-center rounded-tr-[150px] rounded-xl"
+        className=" object-cover w-[450px] md:h-[500px] h-52  object-center md:rounded-tr-[150px] md:rounded-xl rounded-full"
         onLoad={() => setIsLoaded(true)}
 
         />
